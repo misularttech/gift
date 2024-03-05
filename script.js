@@ -16,6 +16,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
 document.addEventListener("keydown", function(event) {
     if (event.ctrlKey && event.key === "o") {
-        window.location.href = "success.html"; // Corrected spelling of "success.html"
+        window.location.href = "succes.html"; // Corrected spelling of "success.html"
     }
 });
