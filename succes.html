@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Credentials</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="icon/x-icon" href="favicon.png">
+</head>
+<body>
+    <div id="results">
+  <h2>Your Saved Credentials</h2>
+  <div id="savedCredentials"></div>
+</div>
+
+  <script >
+    document.addEventListener("DOMContentLoaded", function() {
+      // Retrieve username and password from localStorage
+      var username = localStorage.getItem("username");
+      var password = localStorage.getItem("password");
+      
+      // Display saved credentials
+      var savedCredentialsDiv = document.getElementById("savedCredentials");
+      if (username && password) {
+        savedCredentialsDiv.innerHTML = "<p><strong>Username:</strong> " + username + "</p>" +
+                                         "<p><strong>Password:</strong> " + password + "</p>";
+      } else {
+        savedCredentialsDiv.innerHTML = "<p>No credentials saved.</p>";
+      }
+    });
+ 
+  </script>
+    
+</body>
+</html>
